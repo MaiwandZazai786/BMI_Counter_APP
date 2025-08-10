@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
       modal.style.display = "none";
       showToast(`Welcome, ${userName}!`, { duration: 3000 });
     } else {
-      alert("Please enter your full name!");
+      showToast(`Please Enter Your Full Name!`, { duration: 2000 });
     }
   });
 
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
       meterFill.style.background = cls.meterColor;
     }
 
-    let userMsg = `Hi ${userName}, your BMI is ${bmiRounded}. `;
+    let userMsg = `Dear - ${userName}, your BMI is ${bmiRounded}. `;
     if (bmiRounded < 18.5) {
       userMsg += 'You are slightly underweight — consider a nourishing, balanced diet and regular checkups. Take care of your health!';
     } else if (bmiRounded < 25) {
