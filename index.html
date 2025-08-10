@@ -7,14 +7,46 @@
     <title>BMI Counter App</title>
   </head>
   
-    <div id="nameModal" class="modal">
-      <div class="modal-content">
-        <h2>Welcome!</h2>
-        <p>Please enter your full name:</p>
-        <input type="text" id="userNameInput" placeholder="Full Name" />
-        <button id="submitNameBtn">Continue</button>
-      </div>
-    </div>
+    <!-- Name Prompt Modal -->
+<div id="nameModal" style="
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+">
+  <div style="
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  ">
+    <h2 style="margin-bottom: 1rem; font-family: sans-serif;">Welcome! 👋</h2>
+    <p style="margin-bottom: 1rem; font-size: 1rem;">Please enter your full name:</p>
+    <input id="userNameInput" type="text" placeholder="Your name" style="
+      padding: 0.5rem;
+      width: 100%;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    ">
+    <button id="submitNameBtn" style="
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      background: linear-gradient(90deg,#06b6d4,#3b82f6);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    ">Continue</button>
+  </div>
+</div>
+
 
     <main class="wrapper" role="main">
       <header>
