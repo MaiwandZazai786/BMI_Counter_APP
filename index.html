@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>BMI Counter App</title>
+  </head>
+  <body>
+    <main class="wrapper" role="main">
+      <header>
+        <div class="logo">BMI</div>
+        <div>
+          <h1>BMI Counter</h1>
+          <p class="lead">weight in kg, height in cm or meters.</p>
+        </div>
+      </header>
+
+      <form id="bmiForm" autocomplete="off" novalidate>
+        <div class="row">
+          <div class="field">
+            <label for="weight">Weight (kg)</label>
+            <input
+              id="weight"
+              name="weight"
+              type="number"
+              inputmode="decimal"
+              step="0.1"
+              min="1"
+              placeholder="e.g. 70"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="height">Height (cm or m)</label>
+            <input
+              id="height"
+              name="height"
+              type="number"
+              inputmode="decimal"
+              step="0.1"
+              min="0.3"
+              placeholder="e.g. 170 or 1.70"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="controls">
+          <button type="submit" class="btn-calc">Calculate BMI</button>
+          <button type="button" class="btn-reset" id="resetBtn">Reset</button>
+        </div>
+      </form>
+
+      <div id="message" class="hint" aria-live="polite"></div>
+
+      <div class="result" aria-live="polite" role="status">
+        <div class="left">
+          <div class="bmi-number" id="bmiValue">—</div>
+          <div class="bmi-sub" id="bmiText">
+            Enter values and press Calculate
+          </div>
+          <div class="meter" aria-hidden="true" style="width: 220px">
+            <div class="fill" id="meterFill"></div>
+          </div>
+        </div>
+        <div id="badgeWrap" style="min-width: 120px">
+          <div
+            class="badge"
+            id="bmiBadge"
+            style="background: linear-gradient(90deg, var(--accent), #3b82f6)"
+          >
+            —
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
