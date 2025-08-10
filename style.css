@@ -132,3 +132,21 @@
 .modal-content button:hover {
   background: #005F75;
 }
+
+#nameModal input#userNameInput {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border: 1.8px solid #0891b2; /* matches your theme color */
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+}
+
+#nameModal input#userNameInput:focus {
+  border-color: #056a85;
+  box-shadow: 0 0 6px #056a85aa;
+}
+
