@@ -1,5 +1,3 @@
-// --- script.js ---
-// BMI Calculator with modal name prompt + toast notifications
 
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("nameModal");
@@ -18,10 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let userName = "";
 
-  // Show modal on load
   modal.style.display = "flex";
 
-  // Toast container & showToast function (if not present, create)
   function showToast(text, { duration = 5000, error = false } = {}) {
     let container = document.getElementById('bmiToastContainer');
     if (!container) {
@@ -58,12 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
       t.style.border = '1px solid rgba(6,182,212,0.06)';
     }
     container.appendChild(t);
-    // entrance animation
+   
     requestAnimationFrame(() => {
       t.style.opacity = '1';
       t.style.transform = 'translateY(0)';
     });
-    // remove after duration
+  
     setTimeout(() => {
       t.style.opacity = '0';
       t.style.transform = 'translateY(-6px)';
@@ -81,12 +77,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Handle name submission
   submitNameBtn.addEventListener("click", function () {
     if (userNameInput.value.trim() !== "") {
       userName = userNameInput.value.trim();
       modal.style.display = "none";
-      showToast(`Welcome, ${userName}!`, { duration: 3000 });
+      showToast(`Welcome Dear: , ${userName}!`, { duration: 3000 });
     } else {
       showToast(`Please Enter Your Full Name!`, { duration: 2000 });
     }
@@ -154,7 +149,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (resetBtn) resetBtn.focus();
   }
 
-  // Event listeners
   if (form) {
     form.addEventListener('submit', (ev) => {
       ev.preventDefault();
