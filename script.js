@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (userNameInput.value.trim() !== "") {
       userName = userNameInput.value.trim();
       modal.style.display = "none";
-      showToast(`Welcome Dear: , ${userName}!`, { duration: 3000 });
+      showToast(`Welcome Dear, ${userName}! 🙋🏻‍♂️`, { duration: 4000 });
     } else {
       showToast(`Please Enter Your Full Name!`, { duration: 2000 });
     }
